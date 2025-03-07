@@ -1,11 +1,12 @@
-import streamlit as st
 from pathlib import Path
 from pdf2image import convert_from_path
 from paddleocr import PaddleOCR
-import shutil
-import sys
 
-global poppler_dir
+import streamlit as st
+# import shutil
+
+
+# global poppler_dir
 
 # Paths
 # poppler_dir = "/opt/homebrew/opt/poppler/bin"
@@ -33,15 +34,19 @@ def pdf_to_img(pdf_dir, img_dir, poppler_dir):
     for pdf in pdfs:
         province_dir = img_dir / pdf.stem
         province_dir.mkdir(parents=True, exist_ok=True)
-        imgs = convert_from_path(pdf, dpi=300, poppler_path=poppler_dir)
+        imgs = convert_from_path(
+            pdf, 
+            dpi=300, 
+            poppler_path=poppler_dir
+        )
 
         n_digits = 2 if len(imgs) < 100 else 3 
         progress_bar = st.progress(0)  # Streamlit progress bar
 
         for i, img in enumerate(imgs, 1):
             page_num = str(i).zfill(n_digits)
-            img_path = province_dir / f"{pdf.stem}_{page_num}.jpg"
-            img.save(img_path, "JPEG")
+            img_path = province_dir / f"{pdf.stem}_{page_num}.png"
+            img.save(img_path, "PNG")
             progress_bar.progress(i / len(imgs))  # Update progress bar
 
         st.success(f"✅ Conversion completed for `{pdf}`. Images saved to `{province_dir}`.")
@@ -53,13 +58,13 @@ def ocr_from_img(img_dir, txt_dir):
 
     for p in provinces:
         p_txt = txt_dir / f"{p.stem}_ocr.txt"
-        p_imgs = sorted(p.glob("*.jpg"))
-
-        st.write(f"🔍 Processing OCR for `{p}`...")
+        p_imgs = sorted(p.glob("*.png"))
+        
         progress_bar = st.progress(0)
 
         with open(p_txt, "w") as f:
             for i, img in enumerate(p_imgs):
+                st.write(f"==> Extracting from: `{img}` ...")
                 result = ocr.ocr(str(img), cls=True)
                 for line in result:
                     for word in line:
@@ -67,18 +72,14 @@ def ocr_from_img(img_dir, txt_dir):
                 
                 progress_bar.progress((i + 1) / len(p_imgs))  # Update progress
 
-        st.success(f"✅ OCR completed. Budget text saved to `{p_txt}`.")
-
-
-
+        st.success(f"✅ OCR completed. Budget of {p.stem} province saved to `{p_txt}`.")
 
 
 
 # Convert PDFs to images
 if st.button("Start converting PDFs to images") and pdf_dir.exists():
-    st.write("Starting converting...")
+    st.write("Starting converting PDFs to images...")
     pdf_to_img(pdf_dir, img_dir, poppler_dir)
-    st.success("PDF conversion completed!")
 
 # Run OCR to extract text from images
 if st.button("Start OCR"):

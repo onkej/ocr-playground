@@ -1,7 +1,7 @@
 from pathlib import Path
 from pdf2image import convert_from_path
 from paddleocr import PaddleOCR
-import argparse
+# import argparse
 
 
 """
@@ -13,15 +13,16 @@ ocr_dir:        Path to generated OCR texts
 
 # global poppler_dir
 poppler_dir = "/opt/homebrew/opt/poppler/bin"
-pdf_dir = "pdfs"
-img_dir = "images"
-txt_dir = "output"
+pdf_dir = Path("pdfs")
+img_dir = Path("images")
+txt_dir = Path("output")
+
+img_dir.mkdir(parents=True, exist_ok=True)
+txt_dir.mkdir(parents=True, exist_ok=True)
 
 
 def pdf_to_img(pdf_dir, img_dir):
     """ convert PDFs to images"""
-    pdf_dir, img_dir = Path(pdf_dir), Path(img_dir)
-    img_dir.mkdir(parents=True, exist_ok=True)
     pdfs = list(pdf_dir.glob("*.pdf"))
 
     for pdf in pdfs:
@@ -32,25 +33,23 @@ def pdf_to_img(pdf_dir, img_dir):
             dpi=300, 
             poppler_path=poppler_dir
         )
-        n_digits = 3 if len(imgs) > 99 else 2
+        n_digits = 2 if len(imgs) < 100 else 3
 
         for i, img in enumerate(imgs, 1):
             page_num = str(i).zfill(n_digits)  # Use zfill to pad with zeros
-            img_path = province_dir / f"{pdf.stem}_{page_num}.jpg"
-            img.save(img_path, "JPEG")     
+            img_path = province_dir / f"{pdf.stem}_{page_num}.png"
+            img.save(img_path, "PNG")     
 
 
 def ocr_from_img(img_dir, txt_dir):
     """get ocr texts from images"""
-    txt_dir = Path(txt_dir)
-    txt_dir.mkdir(parents=True, exist_ok=True)
     ocr = PaddleOCR(lang="ch", use_angle_cls=True)
-    provinces = [p for p in Path(img_dir).glob("*") if not p.name.startswith(".")]
+    provinces = [p for p in img_dir.glob("*") if p.is_dir()]
     
     for p in provinces:
         print(f"==> Processing images of {p.stem} province ...")
         p_txt = txt_dir / f"{p.stem}_ocr.txt" # create empty txt for each province
-        p_imgs = sorted(p.glob("*.jpg")) # group all images of the province
+        p_imgs = sorted(p.glob("*.png")) # group all images of the province
         
         with open(p_txt, "w") as f:
             for img in p_imgs:
