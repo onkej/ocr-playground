@@ -1,9 +1,9 @@
-pdfs/
-others/
-output/
-images/
-*.py
-*.pdf
+# pdfs/
+# others/
+# output/
+# images/
+# *.py
+# *.pdf
 .devcontainer/
 .vscode/
 
