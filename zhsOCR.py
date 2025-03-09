@@ -12,7 +12,7 @@ ocr = PaddleOCR(
     lang="ch",  # model used for Chinese text detection
     page_num=0, # number of PDF pages to process, 0 => all pages
     use_angle_cls=False, # disable angle classifier cuz official texts are well-aligned 
-    use_gpu=False, # use GPU? 
+    use_gpu=True, # use GPU? 
     rec_char_dict_path=dict_path, # character/label mappping dictionary
     det_db_unclip_ratio=2.0, # ratio used for detecting text boxes
     help=False, 
