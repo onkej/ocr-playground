@@ -11,12 +11,14 @@ dict_path = "./dict/ppocr_keys_v1.txt"
 ocr = PaddleOCR(
     lang="ch",  # model used for Chinese text detection
     page_num=0, # number of PDF pages to process, 0 => all pages
+    det_model_dir='models/ch_PP-OCRv4_det_infer',
+    rec_model_dir='models/ch_PP-OCRv4_rec_infer',
+    det_db_unclip_ratio=2.0, # ratio used for detecting text boxes
+    rec_char_dict_path=dict_path, # character/label mappping dictionary
+    # help=False, 
+    use_space_char=False, # whether to use space character
     use_angle_cls=False, # disable angle classifier cuz official texts are well-aligned 
     use_gpu=True, # use GPU? 
-    rec_char_dict_path=dict_path, # character/label mappping dictionary
-    det_db_unclip_ratio=2.0, # ratio used for detecting text boxes
-    help=False, 
-    use_space_char=False, # whether to use space character
 )
 
 def ocr_from_pdf(pdf):
