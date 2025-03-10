@@ -22,7 +22,7 @@ To address this challenge, we plan to systematically gather and process budget f
 # Installation
 To run the application, you need to install:
 - Python 3.12
-- Download the repository by running the following command in your terminal (or simply by clicking the green `Code` button and selecting `Download ZIP`):
+- Download this repository by running the following command in your terminal, or simply by clicking the green `Code` button and selecting `Download ZIP`):
 ```bash
 git clone https://github.com/onkej/ocr-playground.git
 ```
@@ -30,7 +30,11 @@ git clone https://github.com/onkej/ocr-playground.git
 ```bash
 cd ocr-playground
 ```
-
+- Create a virtual environment for the project and activate it:
+```bash
+python -m venv ocr
+source ocr/bin/activate
+```
 - Install the required packages:
 ```bash
 pip install -r requirements.txt
@@ -64,7 +68,7 @@ At the end of the process, you can click to download all extracted texts (in a `
 
 5. **PDF? or image?** At first, I learned that in general, OCR tools require images as input, so I spent some time to explore common pdf-to-image conversion packages. I tried to use the `pdf2image` to do the job, but there's a shortcoming that this package requires installing `poppler`, which is a system dependency. I thought it might be complicated in terms of deployment on Streamlit. So, even though I successfully converted PDF files to images and extracted the texts perfectly, I preferred to switch to another approach. At this very time I learned PaddleOCR can accept PDF files as input so I decided to switch to this easier feature instead.
 
-6. **About deployment**: it failed `XD`... maybe because of some dependencies that cannot be correctly installed on the server. I will try to deploy it on Heroku later. So far, I have tested it on my local and it works well. Hopefully it will work on yours too. 🤪
+6. **About deployment**: it failed `XD`... maybe because of some dependencies that cannot be correctly installed on the server. I will try to deploy it later. So far, I have tested it on my local and it works well. Hopefully it will work on yours too. 🤪
 
 
 # References
