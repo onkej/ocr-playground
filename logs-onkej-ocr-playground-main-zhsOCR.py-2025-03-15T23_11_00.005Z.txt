@@ -1,0 +1,387 @@
+
+[     UTC     ] Logs for ocr-for-chinese-pdf.streamlit.app/
+────────────────────────────────────────────────────────────────────────────────────────
+[23:08:51] 🖥 Provisioning machine...
+[23:08:57] 🎛 Preparing system...
+[23:09:02] ⛓ Spinning up manager process...
+[23:09:09] 🎈 Inflating balloons...
+[23:08:57] 🚀 Starting up repository: 'ocr-playground', branch: 'main', main module: 'zhsOCR.py'
+[23:08:57] 🐙 Cloning repository...
+[23:09:01] 🐙 Cloning into '/mount/src/ocr-playground'...
+Warning: Permanently added the ED25519 host key for IP address '140.82.116.4' to the list of known hosts.
+
+[23:09:01] 🐙 Cloned repository!
+[23:09:01] 🐙 Pulling code changes from Github...
+[23:09:02] 📦 Processing dependencies...
+[23:09:02] 📦 Apt dependencies were installed from /mount/src/ocr-playground/packages.txt using apt-get.
+Hit:1 http://deb.debian.org/debian bullseye InRelease
+Get:2 http://deb.debian.org/debian-security bullseye-security InRelease [27.2 kB]
+Get:3 http://deb.debian.org/debian bullseye-updates InRelease [44.1 kB]
+Get:4 https://packages.microsoft.com/debian/11/prod bullseye InRelease [3649 B]
+Get:5 http://deb.debian.org/debian-security bullseye-security/main amd64 Packages [350 kB]
+Get:6 https://packages.microsoft.com/debian/11/prod bullseye/main amd64 Packages [191 kB]
+Fetched 616 kB in 1s (675 kB/s)
+Reading package lists...[2025-03-15 23:09:04.778318] 
+Reading package lists...[2025-03-15 23:09:05.473035] 
+Building dependency tree...[2025-03-15 23:09:05.731104] 
+Reading state information...[2025-03-15 23:09:05.731588] 
+libglib2.0-0 is already the newest version (2.66.8-1+deb11u5).
+libglib2.0-0 set to manually installed.
+The following additional packages will be installed:
+  libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1
+  libdrm2 libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0
+  libllvm11 libpciaccess0 libsensors-config libsensors5 libvulkan1
+  libwayland-client0 libx11-xcb1 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0
+  libxcb-present0 libxcb-randr0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0
+  libxdamage1 libxfixes3 libxshmfence1 libxxf86vm1 libz3-4 mesa-vulkan-drivers
+Suggested packages:
+  pciutils lm-sensors
+The following NEW packages will be installed:
+  libdrm-amdgpu1 libdrm-common libdrm-intel1 libdrm-nouveau2 libdrm-radeon1
+  libdrm2 libgl1 libgl1-mesa-dri libglapi-mesa libglvnd0 libglx-mesa0 libglx0
+  libllvm11 libpciaccess0 libsensors-config libsensors5 libvulkan1
+  libwayland-client0 libx11-xcb1 libxcb-dri2-0 libxcb-dri3-0 libxcb-glx0
+  libxcb-present0 libxcb-randr0 libxcb-shm0 libxcb-sync1 libxcb-xfixes0
+  libxdamage1 libxfixes3 libxshmfence1 libxxf86vm1 libz3-4 mesa-vulkan-drivers
+0 upgraded, 33 newly installed, 0 to remove and 0 not upgraded.
+Need to get 40.6 MB of archives.
+After this operation, 168 MB of additional disk space will be used.
+Get:1 http://deb.debian.org/debian bullseye/main amd64 libdrm-common all 2.4.104-1 [14.9 kB]
+Get:2 http://deb.debian.org/debian bullseye/main amd64 libdrm2 amd64 2.4.104-1 [41.5 kB]
+Get:3 http://deb.debian.org/debian bullseye/main amd64 libdrm-amdgpu1 amd64 2.4.104-1 [28.5 kB]
+Get:4 http://deb.debian.org/debian bullseye/main amd64 libpciaccess0 amd64 0.16-1 [53.6 kB]
+Get:5 http://deb.debian.org/debian bullseye/main amd64 libdrm-intel1 amd64 2.4.104-1 [71.8 kB]
+Get:6 http://deb.debian.org/debian bullseye/main amd64 libdrm-nouveau2 amd64 2.4.104-1 [26.8 kB]
+Get:7 http://deb.debian.org/debian bullseye/main amd64 libdrm-radeon1 amd64 2.4.104-1 [30.2 kB]
+Get:8 http://deb.debian.org/debian bullseye/main amd64 libglapi-mesa amd64 20.3.5-1 [71.7 kB]
+Get:9 http://deb.debian.org/debian bullseye/main amd64 libz3-4 amd64 4.8.10-1 [6949 kB]
+Get:10 http://deb.debian.org/debian bullseye/main amd64 libllvm11 amd64 1:11.0.1-2 [17.9 MB]
+Get:11 http://deb.debian.org/debian bullseye/main amd64 libsensors-config all 1:3.6.0-7 [32.3 kB]
+Get:12 http://deb.debian.org/debian bullseye/main amd64 libsensors5 amd64 1:3.6.0-7 [52.3 kB]
+Get:13 http://deb.debian.org/debian bullseye/main amd64 libvulkan1 amd64 1.2.162.0-1 [103 kB]
+Get:14 http://deb.debian.org/debian bullseye/main amd64 libgl1-mesa-dri amd64 20.3.5-1 [9633 kB]
+Get:15 http://deb.debian.org/debian bullseye/main amd64 libglvnd0 amd64 1.3.2-1 [53.6 kB]
+Get:16 http://deb.debian.org/debian bullseye/main amd64 libx11-xcb1 amd64 2:1.7.2-1+deb11u2 [204 kB]
+Get:17 http://deb.debian.org/debian bullseye/main amd64 libxcb-dri2-0 amd64 1.14-3 [103 kB]
+Get:18 http://deb.debian.org/debian bullseye/main amd64 libxcb-dri3-0 amd64 1.14-3 [102 kB]
+Get:19 http://deb.debian.org/debian bullseye/main amd64 libxcb-glx0 amd64 1.14-3 [118 kB]
+Get:20 http://deb.debian.org/debian bullseye/main amd64 libxcb-present0 amd64 1.14-3 [101 kB]
+Get:21 http://deb.debian.org/debian bullseye/main amd64 libxcb-shm0 amd64 1.14-3 [101 kB]
+Get:22 http://deb.debian.org/debian bullseye/main amd64 libxcb-sync1 amd64 1.14-3 [105 kB]
+Get:23 http://deb.debian.org/debian bullseye/main amd64 libxcb-xfixes0 amd64 1.14-3 [105 kB]
+Get:24 http://deb.debian.org/debian bullseye/main amd64 libxdamage1 amd64 1:1.1.5-2 [15.7 kB]
+Get:25 http://deb.debian.org/debian bullseye/main amd64 libxfixes3 amd64 1:5.0.3-2 [22.1 kB]
+Get:26 http://deb.debian.org/debian bullseye/main amd64 libxshmfence1 amd64 1.3-1 [8820 B]
+Get:27 http://deb.debian.org/debian bullseye/main amd64 libxxf86vm1 amd64 1:1.1.4-1+b2 [20.8 kB]
+Get:28 http://deb.debian.org/debian bullseye/main amd64 libglx-mesa0 amd64 20.3.5-1 [186 kB]
+Get:29 http://deb.debian.org/debian bullseye/main amd64 libwayland-client0 amd64 1.18.0-2~exp1.1 [26.9 kB]
+Get:30 http://deb.debian.org/debian bullseye/main amd64 libxcb-randr0 amd64 1.14-3 [113 kB]
+Get:31 http://deb.debian.org/debian bullseye/main amd64 mesa-vulkan-drivers amd64 20.3.5-1 [4086 kB]
+Get:32 http://deb.debian.org/debian bullseye/main amd64 libglx0 amd64 1.3.2-1 [35.7 kB]
+Get:33 http://deb.debian.org/debian bullseye/main amd64 libgl1 amd64 1.3.2-1 [89.5 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 40.6 MB in 0s (82.1 MB/s)
+Selecting previously unselected package libdrm-common.
+(Reading database ... [2025-03-15 23:09:07.174287] (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%[2025-03-15 23:09:07.174655] (Reading database ... 65%[2025-03-15 23:09:07.176937] (Reading database ... 70%[2025-03-15 23:09:07.181130] (Reading database ... 75%[2025-03-15 23:09:07.182319] (Reading database ... 80%[2025-03-15 23:09:07.183772] (Reading database ... 85%[2025-03-15 23:09:07.190538] (Reading database ... 90%[2025-03-15 23:09:07.193597] (Reading database ... 95%[2025-03-15 23:09:07.195810] (Reading database ... 100%(Reading database ... 22036 files and directories currently installed.)
+Preparing to unpack .../00-libdrm-common_2.4.104-1_all.deb ...
+Unpacking libdrm-common (2.4.104-1) ...
+Selecting previously unselected package libdrm2:amd64.
+Preparing to unpack .../01-libdrm2_2.4.104-1_amd64.deb ...
+Unpacking libdrm2:amd64 (2.4.104-1) ...
+Selecting previously unselected package libdrm-amdgpu1:amd64.
+Preparing to unpack .../02-libdrm-amdgpu1_2.4.104-1_amd64.deb ...
+Unpacking libdrm-amdgpu1:amd64 (2.4.104-1) ...
+Selecting previously unselected package libpciaccess0:amd64.
+Preparing to unpack .../03-libpciaccess0_0.16-1_amd64.deb ...
+Unpacking libpciaccess0:amd64 (0.16-1) ...
+Selecting previously unselected package libdrm-intel1:amd64.
+Preparing to unpack .../04-libdrm-intel1_2.4.104-1_amd64.deb ...
+Unpacking libdrm-intel1:amd64 (2.4.104-1) ...
+Selecting previously unselected package libdrm-nouveau2:amd64.
+Preparing to unpack .../05-libdrm-nouveau2_2.4.104-1_amd64.deb ...
+Unpacking libdrm-nouveau2:amd64 (2.4.104-1) ...
+Selecting previously unselected package libdrm-radeon1:amd64.
+Preparing to unpack .../06-libdrm-radeon1_2.4.104-1_amd64.deb ...
+Unpacking libdrm-radeon1:amd64 (2.4.104-1) ...
+Selecting previously unselected package libglapi-mesa:amd64.
+Preparing to unpack .../07-libglapi-mesa_20.3.5-1_amd64.deb ...
+Unpacking libglapi-mesa:amd64 (20.3.5-1) ...
+Selecting previously unselected package libz3-4:amd64.
+Preparing to unpack .../08-libz3-4_4.8.10-1_amd64.deb ...
+Unpacking libz3-4:amd64 (4.8.10-1) ...
+Selecting previously unselected package libllvm11:amd64.
+Preparing to unpack .../09-libllvm11_1%3a11.0.1-2_amd64.deb ...
+Unpacking libllvm11:amd64 (1:11.0.1-2) ...
+Selecting previously unselected package libsensors-config.
+Preparing to unpack .../10-libsensors-config_1%3a3.6.0-7_all.deb ...
+Unpacking libsensors-config (1:3.6.0-7) ...
+Selecting previously unselected package libsensors5:amd64.
+Preparing to unpack .../11-libsensors5_1%3a3.6.0-7_amd64.deb ...
+Unpacking libsensors5:amd64 (1:3.6.0-7) ...
+Selecting previously unselected package libvulkan1:amd64.
+Preparing to unpack .../12-libvulkan1_1.2.162.0-1_amd64.deb ...
+Unpacking libvulkan1:amd64 (1.2.162.0-1) ...
+Selecting previously unselected package libgl1-mesa-dri:amd64.
+Preparing to unpack .../13-libgl1-mesa-dri_20.3.5-1_amd64.deb ...
+Unpacking libgl1-mesa-dri:amd64 (20.3.5-1) ...
+Selecting previously unselected package libglvnd0:amd64.
+Preparing to unpack .../14-libglvnd0_1.3.2-1_amd64.deb ...
+Unpacking libglvnd0:amd64 (1.3.2-1) ...
+Selecting previously unselected package libx11-xcb1:amd64.
+Preparing to unpack .../15-libx11-xcb1_2%3a1.7.2-1+deb11u2_amd64.deb ...
+Unpacking libx11-xcb1:amd64 (2:1.7.2-1+deb11u2) ...
+Selecting previously unselected package libxcb-dri2-0:amd64.
+Preparing to unpack .../16-libxcb-dri2-0_1.14-3_amd64.deb ...
+Unpacking libxcb-dri2-0:amd64 (1.14-3) ...
+Selecting previously unselected package libxcb-dri3-0:amd64.
+Preparing to unpack .../17-libxcb-dri3-0_1.14-3_amd64.deb ...
+Unpacking libxcb-dri3-0:amd64 (1.14-3) ...
+Selecting previously unselected package libxcb-glx0:amd64.
+Preparing to unpack .../18-libxcb-glx0_1.14-3_amd64.deb ...
+Unpacking libxcb-glx0:amd64 (1.14-3) ...
+Selecting previously unselected package libxcb-present0:amd64.
+Preparing to unpack .../19-libxcb-present0_1.14-3_amd64.deb ...
+Unpacking libxcb-present0:amd64 (1.14-3) ...
+Selecting previously unselected package libxcb-shm0:amd64.
+Preparing to unpack .../20-libxcb-shm0_1.14-3_amd64.deb ...
+Unpacking libxcb-shm0:amd64 (1.14-3) ...
+Selecting previously unselected package libxcb-sync1:amd64.
+Preparing to unpack .../21-libxcb-sync1_1.14-3_amd64.deb ...
+Unpacking libxcb-sync1:amd64 (1.14-3) ...
+Selecting previously unselected package libxcb-xfixes0:amd64.
+Preparing to unpack .../22-libxcb-xfixes0_1.14-3_amd64.deb ...
+Unpacking libxcb-xfixes0:amd64 (1.14-3) ...
+Selecting previously unselected package libxdamage1:amd64.
+Preparing to unpack .../23-libxdamage1_1%3a1.1.5-2_amd64.deb ...
+Unpacking libxdamage1:amd64 (1:1.1.5-2) ...
+Selecting previously unselected package libxfixes3:amd64.
+Preparing to unpack .../24-libxfixes3_1%3a5.0.3-2_amd64.deb ...
+Unpacking libxfixes3:amd64 (1:5.0.3-2) ...
+Selecting previously unselected package libxshmfence1:amd64.
+Preparing to unpack .../25-libxshmfence1_1.3-1_amd64.deb ...
+Unpacking libxshmfence1:amd64 (1.3-1) ...
+Selecting previously unselected package libxxf86vm1:amd64.
+Preparing to unpack .../26-libxxf86vm1_1%3a1.1.4-1+b2_amd64.deb ...
+Unpacking libxxf86vm1:amd64 (1:1.1.4-1+b2) ...
+Selecting previously unselected package libglx-mesa0:amd64.
+Preparing to unpack .../27-libglx-mesa0_20.3.5-1_amd64.deb ...
+Unpacking libglx-mesa0:amd64 (20.3.5-1) ...
+Selecting previously unselected package libwayland-client0:amd64.
+Preparing to unpack .../28-libwayland-client0_1.18.0-2~exp1.1_amd64.deb ...
+Unpacking libwayland-client0:amd64 (1.18.0-2~exp1.1) ...
+Selecting previously unselected package libxcb-randr0:amd64.
+Preparing to unpack .../29-libxcb-randr0_1.14-3_amd64.deb ...
+Unpacking libxcb-randr0:amd64 (1.14-3) ...
+Selecting previously unselected package mesa-vulkan-drivers:amd64.
+Preparing to unpack .../30-mesa-vulkan-drivers_20.3.5-1_amd64.deb ...
+Unpacking mesa-vulkan-drivers:amd64 (20.3.5-1) ...
+Selecting previously unselected package libglx0:amd64.
+Preparing to unpack .../31-libglx0_1.3.2-1_amd64.deb ...
+Unpacking libglx0:amd64 (1.3.2-1) ...
+Selecting previously unselected package libgl1:amd64.
+Preparing to unpack .../32-libgl1_1.3.2-1_amd64.deb ...
+Unpacking libgl1:amd64 (1.3.2-1) ...
+Setting up libxcb-dri3-0:amd64 (1.14-3) ...
+Setting up libx11-xcb1:amd64 (2:1.7.2-1+deb11u2) ...
+Setting up libpciaccess0:amd64 (0.16-1) ...
+Setting up libxdamage1:amd64 (1:1.1.5-2) ...
+Setting up libxcb-xfixes0:amd64 (1.14-3) ...
+Setting up libglvnd0:amd64 (1.3.2-1) ...
+Setting up libxcb-glx0:amd64 (1.14-3) ...
+Setting up libsensors-config (1:3.6.0-7) ...
+Setting up libxcb-shm0:amd64 (1.14-3) ...
+Setting up libxxf86vm1:amd64 (1:1.1.4-1+b2) ...
+Setting up libxcb-present0:amd64 (1.14-3) ...
+Setting up libz3-4:amd64 (4.8.10-1) ...
+Setting up libllvm11:amd64 (1:11.0.1-2) ...
+Setting up libxfixes3:amd64 (1:5.0.3-2) ...
+Setting up libxcb-sync1:amd64 (1.14-3) ...
+Setting up libsensors5:amd64 (1:3.6.0-7) ...
+Setting up libglapi-mesa:amd64 (20.3.5-1) ...
+Setting up libvulkan1:amd64 (1.2.162.0-1) ...
+Setting up libxcb-dri2-0:amd64 (1.14-3) ...
+Setting up libxshmfence1:amd64 (1.3-1) ...
+Setting up libxcb-randr0:amd64 (1.14-3) ...
+Setting up libdrm-common (2.4.104-1) ...
+Setting up libwayland-client0:amd64 (1.18.0-2~exp1.1) ...
+Setting up libdrm2:amd64 (2.4.104-1) ...
+Setting up libdrm-amdgpu1:amd64 (2.4.104-1) ...
+Setting up mesa-vulkan-drivers:amd64 (20.3.5-1) ...
+Setting up libdrm-nouveau2:amd64 (2.4.104-1) ...
+Setting up libdrm-radeon1:amd64 (2.4.104-1) ...
+Setting up libdrm-intel1:amd64 (2.4.104-1) ...
+Setting up libgl1-mesa-dri:amd64 (20.3.5-1) ...
+Setting up libglx-mesa0:amd64 (20.3.5-1) ...
+Setting up libglx0:amd64 (1.3.2-1) ...
+Setting up libgl1:amd64 (1.3.2-1) ...
+Processing triggers for libc-bin (2.31-13+deb11u11) ...
+
+──────────────────────────────────────── uv ───────────────────────────────────────────
+
+Using uv pip install.
+Using Python 3.12.9 environment at /home/adminuser/venv
+Resolved 105 packages in 1.27s
+Prepared 105 packages in 10.66s
+Installed 105 packages in 343ms
+ + albucore==0.0.23
+ + albumentations==2.0.5
+ + altair==5.5.0
+ + annotated-types==0.7.0
+ + anyio==4.8.0
+ + appnope==[2025-03-15 23:09:26.876018] 0.1.4
+ + astor==0.8.1
+ + asttokens==3.0.0
+ + attrs==25.1.0[2025-03-15 23:09:26.876227] 
+ + beautifulsoup4==4.13.3
+ + blinker==1.9.0
+ + cachetools==[2025-03-15 23:09:26.876440] 5.5.2
+ + certifi==2025.1.31
+ + charset-normalizer==3.4.1
+ + click==[2025-03-15 23:09:26.876683] 8.1.8
+ + comm==0.2.2
+ + cython==3.0.12
+ + [2025-03-15 23:09:26.876893] debugpy==1.8.13
+ + decorator==5.2.1
+ + executing==2.2.0
+ [2025-03-15 23:09:26.877115] + fire==0.7.0
+ + fonttools==4.56.0
+ + gitdb==4.0.12
+ + gitpython==3.1.44
+ [2025-03-15 23:09:26.877333] + h11==0.14.0
+ + httpcore==1.0.7
+ + httpx==0.28.1[2025-03-15 23:09:26.877578] 
+ + idna==3.10
+ + imageio==2.37.0
+ + ipykernel==[2025-03-15 23:09:26.877798] 6.29.5
+ + ipython==9.0.2
+ + ipython-pygments-lexers==[2025-03-15 23:09:26.878039] 1.1.1
+ + jedi==0.19.2
+ + jinja2==3.1.6[2025-03-15 23:09:26.878259] 
+ + jsonschema==4.23.0
+ + jsonschema-specifications==2024.10.1
+ + jupyter-client==8.6.3
+ +[2025-03-15 23:09:26.878724]  jupyter-core==5.7.2
+ + lazy-loader==0.4
+ + lmdb==1.6.2
+ + lxml==5.3.1
+ + markupsafe==3.0.2
+ + matplotlib-inline==[2025-03-15 23:09:26.879192] 0.1.7
+ + narwhals==1.29.1
+ + nest-asyncio==1.6.0
+ +[2025-03-15 23:09:26.879348]  networkx==3.4.2
+ + numpy==2.2.3
+ + opencv-contrib-python==4.11.0.86
+ [2025-03-15 23:09:26.879580] + opencv-python==4.11.0.86
+ + opencv-python-headless==4.11.0.86
+ + opt-einsum==[2025-03-15 23:09:26.879791] 3.3.0
+ + packaging==24.2
+ + paddleocr==2.10.0
+ + [2025-03-15 23:09:26.880002] paddlepaddle==2.6.2
+ + pandas==2.2.3
+ + parso==0.8.4[2025-03-15 23:09:26.880200] 
+ + pdf2image==1.17.0
+ + pexpect==4.9.0
+ + pillow[2025-03-15 23:09:26.880394] ==11.1.0
+ + platformdirs==4.3.6
+ + prompt-toolkit==3.0.50
+ [2025-03-15 23:09:26.880627] + protobuf==5.29.3
+ + psutil==7.0.0
+ + ptyprocess==[2025-03-15 23:09:26.880825] 0.7.0
+ + pure-eval==0.2.3
+ + pyarrow==19.0.1
+ + pyclipper[2025-03-15 23:09:26.881031] ==1.3.0.post6
+ + pydantic==2.10.6
+ + pydantic-core==2.27.2
+ + [2025-03-15 23:09:26.881228] pydeck==0.9.1
+ + pygments==2.19.1
+ + pymupdf==1.25.3
+ + [2025-03-15 23:09:26.881428] python-dateutil==2.9.0.post0
+ + python-docx==1.1.2
+ + pytz==2025.1
+ + pyyaml==6.0.2[2025-03-15 23:09:26.881661] 
+ + pyzmq==26.2.1
+ + rapidfuzz==3.12.2
+ + referencing==0.36.2
+ + requests==2.32.3
+ + rpds-py==0.23.1
+ + scikit-image==0.25.2
+ + scipy==1.15.2
+ + setuptools==76.0.0
+ + shapely==2.0.7[2025-03-15 23:09:26.882585] 
+ + simsimd==6.2.1
+ + six==1.17.0
+ + [2025-03-15 23:09:26.882814] smmap==5.0.2
+ + sniffio==1.3.1
+ + soupsieve==2.6[2025-03-15 23:09:26.883045] 
+ + stack-data==0.6.3
+ + streamlit==1.43.1
+ + stringzilla[2025-03-15 23:09:26.883249] ==3.12.3
+ + tenacity==9.0.0
+ + termcolor==2.5.0
+ + tifffile==2025.2.18
+ + toml==0.10.2
+ + tornado==6.4.2[2025-03-15 23:09:26.883682] 
+ + tqdm==4.67.1
+ + traitlets==5.14.3
+ + typing-extensions[2025-03-15 23:09:26.883892] ==4.12.2
+ + tzdata==2025.1
+ + urllib3==2.3.0
+ + watchdog==[2025-03-15 23:09:26.884149] 6.0.0
+ + wcwidth==0.2.13
+Checking if Streamlit is installed
+Found Streamlit version 1.43.1 in the environment
+Installing rich for an improved exception logging
+Using uv pip install.
+Using Python 3.12.9 environment at /home/adminuser/venv
+Resolved 4 packages in 133ms
+Prepared 3 packages in 52ms
+Installed 3 packages in 11ms
+ + markdown-it-py==3.0.0
+ + mdurl==0.1.2
+ + rich==13.9.4
+
+────────────────────────────────────────────────────────────────────────────────────────
+
+[23:09:28] 🐍 Python dependencies were installed from /mount/src/ocr-playground/requirements.txt using uv.
+Check if streamlit is installed
+Streamlit is already installed
+[23:09:30] 📦 Processed dependencies!
+
+
+
+/home/adminuser/venv/lib/python3.12/site-packages/paddleocr/ppocr/postprocess/rec_postprocess.py:1229: SyntaxWarning: invalid escape sequence '\W'
+  noletter = "[\W_^\d]"
+/home/adminuser/venv/lib/python3.12/site-packages/paddleocr/ppocr/postprocess/rec_postprocess.py:1455: SyntaxWarning: invalid escape sequence '\W'
+  noletter = "[\W_^\d]"
+download https://paddleocr.bj.bcebos.com/PP-OCRv4/chinese/ch_PP-OCRv4_det_infer.tar to /home/appuser/.paddleocr/whl/det/ch/ch_PP-OCRv4_det_infer/ch_PP-OCRv4_det_infer.tar
+  0%|          | 0/4780 [00:00<?, ?it/s][2025-03-15 23:09:44.713130]   0%|          | 3/4780 [00:00<05:33, 14.30it/s][2025-03-15 23:09:44.992174]   1%|          | 35/4780 [00:00<00:59, 79.99it/s][2025-03-15 23:09:45.201433]   1%|          | 51/4780 [00:00<01:00, 78.52it/s][2025-03-15 23:09:45.471056]   2%|▏         | 83/4780 [00:00<00:48, 95.86it/s][2025-03-15 23:09:45.664006]   2%|▏         | 99/4780 [00:01<00:50, 91.91it/s][2025-03-15 23:09:45.955422]   3%|▎         | 131/4780 [00:01<00:46, 99.02it/s][2025-03-15 23:09:46.327354]   3%|▎         | 163/4780 [00:01<00:49, 93.57it/s][2025-03-15 23:09:46.579316]   4%|▎         | 179/4780 [00:02<00:54, 84.87it/s][2025-03-15 23:09:46.840076]   4%|▍         | 195/4780 [00:02<00:58, 77.83it/s][2025-03-15 23:09:47.096493]   4%|▍         | 211/4780 [00:02<01:02, 73.26it/s][2025-03-15 23:09:47.340014]   5%|▍         | 227/4780 [00:02<01:04, 71.10it/s][2025-03-15 23:09:47.600660]   5%|▌         | 243/4780 [00:03<01:06, 68.14it/s][2025-03-15 23:09:47.844178]   5%|▌         | 259/4780 [00:03<01:07, 67.42it/s][2025-03-15 23:09:48.100463]   6%|▌         | 275/4780 [00:03<01:08, 65.92it/s][2025-03-15 23:09:48.337374]   6%|▌         | 291/4780 [00:03<01:07, 66.46it/s][2025-03-15 23:09:48.592471]   6%|▋         | 307/4780 [00:04<01:08, 65.23it/s][2025-03-15 23:09:48.909620]   7%|▋         | 323/4780 [00:04<01:14, 60.04it/s][2025-03-15 23:09:49.217114]   7%|▋         | 339/4780 [00:04<01:17, 57.42it/s][2025-03-15 23:09:49.566359]   7%|▋         | 355/4780 [00:05<01:22, 53.39it/s][2025-03-15 23:09:49.852672]   8%|▊         | 371/4780 [00:05<01:21, 54.11it/s][2025-03-15 23:09:50.173808]   8%|▊         | 387/4780 [00:05<01:23, 52.75it/s][2025-03-15 23:09:50.484771]   8%|▊         | 403/4780 [00:05<01:23, 52.36it/s][2025-03-15 23:09:50.805655]   9%|▉         | 419/4780 [00:06<01:24, 51.59it/s][2025-03-15 23:09:51.105692]   9%|▉         | 435/4780 [00:06<01:23, 52.10it/s][2025-03-15 23:09:51.426800]   9%|▉         | 451/4780 [00:06<01:24, 51.40it/s][2025-03-15 23:09:51.718922]  10%|▉         | 467/4780 [00:07<01:22, 52.36it/s][2025-03-15 23:09:52.035922]  10%|█         | 483/4780 [00:07<01:22, 51.78it/s][2025-03-15 23:09:52.345121]  10%|█         | 499/4780 [00:07<01:22, 51.77it/s][2025-03-15 23:09:52.661725]  11%|█         | 515/4780 [00:08<01:22, 51.39it/s][2025-03-15 23:09:52.962159]  11%|█         | 531/4780 [00:08<01:21, 51.94it/s][2025-03-15 23:09:53.286692]  11%|█▏        | 547/4780 [00:08<01:22, 51.12it/s][2025-03-15 23:09:53.608544]  12%|█▏        | 563/4780 [00:09<01:23, 50.71it/s][2025-03-15 23:09:53.915623]  12%|█▏        | 579/4780 [00:09<01:22, 51.12it/s][2025-03-15 23:09:54.547370]  12%|█▏        | 595/4780 [00:10<01:46, 39.14it/s][2025-03-15 23:09:54.814474]  13%|█▎        | 611/4780 [00:10<01:35, 43.68it/s][2025-03-15 23:09:55.109184]  13%|█▎        | 627/4780 [00:10<01:29, 46.41it/s][2025-03-15 23:09:55.354012]  13%|█▎        | 643/4780 [00:10<01:21, 50.83it/s][2025-03-15 23:09:55.583468]  14%|█▍        | 659/4780 [00:11<01:14, 55.32it/s][2025-03-15 23:09:55.776912]  14%|█▍        | 675/4780 [00:11<01:06, 61.43it/s][2025-03-15 23:09:55.958721]  14%|█▍        | 691/4780 [00:11<01:00, 67.55it/s][2025-03-15 23:09:56.116990]  15%|█▍        | 707/4780 [00:11<00:54, 75.02it/s][2025-03-15 23:09:56.270739]  15%|█▌        | 723/4780 [00:11<00:49, 81.87it/s][2025-03-15 23:09:56.411424]  15%|█▌        | 739/4780 [00:11<00:45, 89.39it/s][2025-03-15 23:09:56.534800]  16%|█▌        | 755/4780 [00:12<00:40, 98.68it/s][2025-03-15 23:09:56.656189]  16%|█▌        | 771/4780 [00:12<00:37, 106.59it/s][2025-03-15 23:09:56.858471]  17%|█▋        | 803/4780 [00:12<00:31, 125.50it/s][2025-03-15 23:09:56.959989]  17%|█▋        | 819/4780 [00:12<00:29, 132.17it/s][2025-03-15 23:09:57.133983]  18%|█▊        | 851/4780 [00:12<00:26, 149.63it/s][2025-03-15 23:09:57.292521]  18%|█▊        | 883/4780 [00:12<00:23, 165.58it/s][2025-03-15 23:09:57.441394]  19%|█▉        | 915/4780 [00:12<00:21, 179.93it/s][2025-03-15 23:09:57.575539]  20%|█▉        | 947/4780 [00:13<00:19, 197.66it/s][2025-03-15 23:09:57.692095]  20%|██        | 979/4780 [00:13<00:17, 215.24it/s][2025-03-15 23:09:57.802279]  21%|██        | 1011/4780 [00:13<00:16, 234.08it/s][2025-03-15 23:09:57.956994]  22%|██▏       | 1059/4780 [00:13<00:14, 259.84it/s][2025-03-15 23:09:58.090984]  23%|██▎       | 1107/4780 [00:13<00:12, 288.83it/s][2025-03-15 23:09:58.221136]  24%|██▍       | 1155/4780 [00:13<00:11, 311.97it/s][2025-03-15 23:09:58.340483]  25%|██▌       | 1203/4780 [00:13<00:10, 336.80it/s][2025-03-15 23:09:58.452542]  26%|██▌       | 1251/4780 [00:13<00:09, 361.55it/s][2025-03-15 23:09:58.556420]  27%|██▋       | 1299/4780 [00:14<00:08, 388.21it/s][2025-03-15 23:09:58.656806]  28%|██▊       | 1347/4780 [00:14<00:08, 412.60it/s][2025-03-15 23:09:58.770587]  30%|██▉       | 1411/4780 [00:14<00:07, 457.57it/s][2025-03-15 23:09:58.880242]  31%|███       | 1475/4780 [00:14<00:06, 494.59it/s][2025-03-15 23:09:58.985327]  32%|███▏      | 1539/4780 [00:14<00:06, 527.46it/s][2025-03-15 23:09:59.105320]  34%|███▍      | 1619/4780 [00:14<00:05, 571.02it/s][2025-03-15 23:09:59.217075]  36%|███▌      | 1699/4780 [00:14<00:05, 614.00it/s][2025-03-15 23:09:59.319162]  37%|███▋      | 1779/4780 [00:14<00:04, 661.51it/s][2025-03-15 23:09:59.436200]  39%|███▉      | 1875/4780 [00:14<00:04, 711.43it/s][2025-03-15 23:09:59.542974]  41%|████      | 1971/4780 [00:15<00:03, 765.78it/s][2025-03-15 23:09:59.644585]  43%|████▎     | 2067/4780 [00:15<00:03, 816.69it/s][2025-03-15 23:09:59.752756]  46%|████▌     | 2179/4780 [00:15<00:02, 882.47it/s][2025-03-15 23:09:59.854848]  48%|████▊     | 2291/4780 [00:15<00:02, 944.38it/s][2025-03-15 23:09:59.964287]  51%|█████     | 2419/4780 [00:15<00:02, 1013.45it/s][2025-03-15 23:10:00.065155]  53%|█████▎    | 2547/4780 [00:15<00:02, 1086.75it/s][2025-03-15 23:10:00.171823]  56%|█████▋    | 2691/4780 [00:15<00:01, 1166.75it/s][2025-03-15 23:10:00.282354]  60%|█████▉    | 2851/4780 [00:15<00:01, 1253.57it/s][2025-03-15 23:10:00.384724]  63%|██████▎   | 3011/4780 [00:15<00:01, 1343.74it/s][2025-03-15 23:10:00.490133]  67%|██████▋   | 3187/4780 [00:15<00:01, 1440.97it/s][2025-03-15 23:10:00.598387]  71%|███████   | 3379/4780 [00:16<00:00, 1544.61it/s][2025-03-15 23:10:00.697941]  75%|███████▍  | 3576/4780 [00:16<00:00, 1666.82it/s][2025-03-15 23:10:00.798828]  79%|███████▉  | 3779/4780 [00:16<00:00, 1768.59it/s][2025-03-15 23:10:00.900946]  84%|████████▎ | 4003/4780 [00:16<00:00, 1894.50it/s][2025-03-15 23:10:01.004050]  89%|████████▉ | 4243/4780 [00:16<00:00, 2024.27it/s][2025-03-15 23:10:01.105528]  94%|█████████▍| 4499/4780 [00:16<00:00, 2172.73it/s][2025-03-15 23:10:01.204997] 100%|██████████| 4780/4780 [00:16<00:00, 286.19it/s] 
+download https://paddleocr.bj.bcebos.com/PP-OCRv4/chinese/ch_PP-OCRv4_rec_infer.tar to /home/appuser/.paddleocr/whl/rec/ch/ch_PP-OCRv4_rec_infer/ch_PP-OCRv4_rec_infer.tar
+  0%|          | 0/10720 [00:00<?, ?it/s][2025-03-15 23:10:02.841215]   0%|          | 3/10720 [00:00<12:57, 13.79it/s][2025-03-15 23:10:03.116897]   0%|          | 35/10720 [00:00<02:14, 79.69it/s][2025-03-15 23:10:03.330733]   0%|          | 51/10720 [00:00<02:17, 77.67it/s][2025-03-15 23:10:03.599870]   1%|          | 83/10720 [00:00<01:51, 95.39it/s][2025-03-15 23:10:03.793310]   1%|          | 99/10720 [00:01<01:56, 91.47it/s][2025-03-15 23:10:04.086289]   1%|          | 131/10720 [00:01<01:47, 98.51it/s][2025-03-15 23:10:04.460576]   2%|▏         | 163/10720 [00:01<01:53, 93.03it/s][2025-03-15 23:10:04.721553]   2%|▏         | 179/10720 [00:02<02:05, 83.68it/s][2025-03-15 23:10:04.965860]   2%|▏         | 195/10720 [00:02<02:14, 78.52it/s][2025-03-15 23:10:05.220142]   2%|▏         | 211/10720 [00:02<02:22, 73.91it/s][2025-03-15 23:10:05.464207]   2%|▏         | 227/10720 [00:02<02:26, 71.49it/s][2025-03-15 23:10:05.721074]   2%|▏         | 243/10720 [00:03<02:32, 68.70it/s][2025-03-15 23:10:05.964120]   2%|▏         | 259/10720 [00:03<02:34, 67.87it/s][2025-03-15 23:10:06.227808]   3%|▎         | 275/10720 [00:03<02:39, 65.68it/s][2025-03-15 23:10:06.465151]   3%|▎         | 291/10720 [00:03<02:37, 66.13it/s][2025-03-15 23:10:06.791546]   3%|▎         | 307/10720 [00:04<02:53, 59.99it/s][2025-03-15 23:10:07.081053]   3%|▎         | 323/10720 [00:04<02:57, 58.51it/s][2025-03-15 23:10:07.445479]   3%|▎         | 339/10720 [00:04<03:14, 53.25it/s][2025-03-15 23:10:07.726418]   3%|▎         | 355/10720 [00:05<03:10, 54.30it/s][2025-03-15 23:10:08.044664]   3%|▎         | 371/10720 [00:05<03:15, 53.04it/s][2025-03-15 23:10:08.357585]   4%|▎         | 387/10720 [00:05<03:16, 52.45it/s][2025-03-15 23:10:08.657578]   4%|▍         | 403/10720 [00:06<03:15, 52.74it/s][2025-03-15 23:10:08.964259]   4%|▍         | 419/10720 [00:06<03:15, 52.57it/s][2025-03-15 23:10:09.270152]   4%|▍         | 435/10720 [00:06<03:16, 52.46it/s][2025-03-15 23:10:09.644103]   4%|▍         | 451/10720 [00:07<03:28, 49.13it/s][2025-03-15 23:10:09.998014]   4%|▍         | 467/10720 [00:07<03:34, 47.89it/s][2025-03-15 23:10:10.429395]   5%|▍         | 483/10720 [00:07<03:52, 44.04it/s][2025-03-15 23:10:10.777255]   5%|▍         | 499/10720 [00:08<03:49, 44.61it/s][2025-03-15 23:10:11.213870]   5%|▍         | 515/10720 [00:08<04:03, 41.89it/s][2025-03-15 23:10:11.608569]   5%|▍         | 531/10720 [00:08<04:05, 41.47it/s][2025-03-15 23:10:11.974803]   5%|▌         | 547/10720 [00:09<04:01, 42.11it/s][2025-03-15 23:10:12.683114]   5%|▌         | 563/10720 [00:10<05:03, 33.44it/s][2025-03-15 23:10:13.009925]   5%|▌         | 579/10720 [00:10<04:34, 36.96it/s][2025-03-15 23:10:13.312773]   6%|▌         | 595/10720 [00:10<04:09, 40.61it/s][2025-03-15 23:10:13.547678]   6%|▌         | 611/10720 [00:10<03:38, 46.23it/s][2025-03-15 23:10:13.779701]   6%|▌         | 627/10720 [00:11<03:16, 51.31it/s][2025-03-15 23:10:13.962626]   6%|▌         | 643/10720 [00:11<02:52, 58.54it/s][2025-03-15 23:10:14.146095]   6%|▌         | 659/10720 [00:11<02:34, 64.94it/s][2025-03-15 23:10:14.295717]   6%|▋         | 675/10720 [00:11<02:16, 73.62it/s][2025-03-15 23:10:14.448234]   6%|▋         | 691/10720 [00:11<02:04, 80.85it/s][2025-03-15 23:10:14.587704]   7%|▋         | 707/10720 [00:11<01:52, 88.71it/s][2025-03-15 23:10:14.703948]   7%|▋         | 723/10720 [00:12<01:40, 99.30it/s][2025-03-15 23:10:14.824570]   7%|▋         | 739/10720 [00:12<01:32, 107.39it/s][2025-03-15 23:10:15.023573]   7%|▋         | 771/10720 [00:12<01:18, 126.85it/s][2025-03-15 23:10:15.205318]   7%|▋         | 803/10720 [00:12<01:09, 142.69it/s][2025-03-15 23:10:15.367401]   8%|▊         | 835/10720 [00:12<01:02, 158.63it/s][2025-03-15 23:10:15.521792]   8%|▊         | 867/10720 [00:12<00:57, 172.41it/s][2025-03-15 23:10:15.655785]   8%|▊         | 899/10720 [00:13<00:51, 189.66it/s][2025-03-15 23:10:15.778040]   9%|▊         | 931/10720 [00:13<00:47, 207.92it/s][2025-03-15 23:10:15.892828]   9%|▉         | 963/10720 [00:13<00:43, 225.89it/s][2025-03-15 23:10:16.004046]   9%|▉         | 995/10720 [00:13<00:40, 241.95it/s][2025-03-15 23:10:16.144255]  10%|▉         | 1043/10720 [00:13<00:35, 273.98it/s][2025-03-15 23:10:16.280232]  10%|█         | 1091/10720 [00:13<00:32, 298.19it/s][2025-03-15 23:10:16.406171]  11%|█         | 1139/10720 [00:13<00:29, 322.14it/s][2025-03-15 23:10:16.520848]  11%|█         | 1187/10720 [00:13<00:27, 348.42it/s][2025-03-15 23:10:16.628651]  12%|█▏        | 1235/10720 [00:14<00:25, 374.36it/s][2025-03-15 23:10:16.729488]  12%|█▏        | 1283/10720 [00:14<00:23, 401.21it/s][2025-03-15 23:10:16.852050]  13%|█▎        | 1347/10720 [00:14<00:21, 439.23it/s][2025-03-15 23:10:16.963639]  13%|█▎        | 1411/10720 [00:14<00:19, 478.19it/s][2025-03-15 23:10:17.069840]  14%|█▍        | 1475/10720 [00:14<00:18, 513.36it/s][2025-03-15 23:10:17.170457]  14%|█▍        | 1539/10720 [00:14<00:16, 547.25it/s][2025-03-15 23:10:17.286383]  15%|█▌        | 1619/10720 [00:14<00:15, 592.02it/s][2025-03-15 23:10:17.394346]  16%|█▌        | 1699/10720 [00:14<00:14, 635.83it/s][2025-03-15 23:10:17.511950]  17%|█▋        | 1795/10720 [00:14<00:12, 692.55it/s][2025-03-15 23:10:17.624238]  18%|█▊        | 1891/10720 [00:15<00:11, 741.40it/s][2025-03-15 23:10:17.728968]  19%|█▊        | 1987/10720 [00:15<00:11, 791.23it/s][2025-03-15 23:10:17.839867]  20%|█▉        | 2099/10720 [00:15<00:10, 857.09it/s][2025-03-15 23:10:17.945942]  21%|██        | 2211/10720 [00:15<00:09, 915.28it/s][2025-03-15 23:10:18.056846]  22%|██▏       | 2339/10720 [00:15<00:08, 987.85it/s][2025-03-15 23:10:18.160056]  23%|██▎       | 2467/10720 [00:15<00:07, 1060.37it/s][2025-03-15 23:10:18.267794]  24%|██▍       | 2611/10720 [00:15<00:07, 1143.24it/s][2025-03-15 23:10:18.369191]  26%|██▌       | 2755/10720 [00:15<00:06, 1222.70it/s][2025-03-15 23:10:18.475112]  27%|██▋       | 2915/10720 [00:15<00:05, 1309.16it/s][2025-03-15 23:10:18.583624]  29%|██▉       | 3091/10720 [00:15<00:05, 1406.43it/s][2025-03-15 23:10:18.684127]  30%|███       | 3267/10720 [00:16<00:04, 1505.28it/s][2025-03-15 23:10:18.790339]  32%|███▏      | 3459/10720 [00:16<00:04, 1595.91it/s][2025-03-15 23:10:18.891621]  34%|███▍      | 3667/10720 [00:16<00:04, 1730.15it/s][2025-03-15 23:10:18.996809]  36%|███▋      | 3891/10720 [00:16<00:03, 1850.49it/s][2025-03-15 23:10:19.100656]  39%|███▊      | 4131/10720 [00:16<00:03, 1986.95it/s][2025-03-15 23:10:19.205761]  41%|████      | 4387/10720 [00:16<00:02, 2122.70it/s][2025-03-15 23:10:19.308817]  43%|████▎     | 4659/10720 [00:16<00:02, 2276.16it/s][2025-03-15 23:10:19.410530]  46%|████▌     | 4947/10720 [00:16<00:02, 2440.14it/s][2025-03-15 23:10:19.512853]  49%|████▉     | 5251/10720 [00:16<00:02, 2598.79it/s][2025-03-15 23:10:19.616211]  52%|█████▏    | 5587/10720 [00:16<00:01, 2793.96it/s][2025-03-15 23:10:19.719289]  55%|█████▌    | 5939/10720 [00:17<00:01, 2980.29it/s][2025-03-15 23:10:19.823241]  59%|█████▉    | 6323/10720 [00:17<00:01, 3195.15it/s][2025-03-15 23:10:19.924393]  63%|██████▎   | 6723/10720 [00:17<00:01, 3419.31it/s][2025-03-15 23:10:20.027151]  67%|██████▋   | 7155/10720 [00:17<00:00, 3655.50it/s][2025-03-15 23:10:20.129048]  71%|███████   | 7619/10720 [00:17<00:00, 3922.64it/s][2025-03-15 23:10:20.229183]  76%|███████▌  | 8101/10720 [00:17<00:00, 4187.23it/s][2025-03-15 23:10:20.330980]  80%|████████  | 8627/10720 [00:17<00:00, 4481.02it/s][2025-03-15 23:10:20.431743]  86%|████████▌ | 9187/10720 [00:17<00:00, 4801.93it/s][2025-03-15 23:10:20.532023]  91%|█████████ | 9779/10720 [00:17<00:00, 5127.86it/s][2025-03-15 23:10:20.633236]  97%|█████████▋| 10419/10720 [00:18<00:00, 5486.25it/s][2025-03-15 23:10:20.675956] 100%|██████████| 10720/10720 [00:18<00:00, 593.83it/s] 
+download https://paddleocr.bj.bcebos.com/dygraph_v2.0/ch/ch_ppocr_mobile_v2.0_cls_infer.tar to /home/appuser/.paddleocr/whl/cls/ch_ppocr_mobile_v2.0_cls_infer/ch_ppocr_mobile_v2.0_cls_infer.tar
+  0%|          | 0/2138 [00:00<?, ?it/s][2025-03-15 23:10:22.362450]   1%|          | 19/2138 [00:00<00:28, 73.99it/s][2025-03-15 23:10:22.608934]   2%|▏         | 35/2138 [00:00<00:30, 68.77it/s][2025-03-15 23:10:22.854710]   3%|▎         | 67/2138 [00:00<00:21, 96.50it/s][2025-03-15 23:10:23.109876]   5%|▌         | 115/2138 [00:01<00:15, 133.30it/s][2025-03-15 23:10:23.356249]   7%|▋         | 147/2138 [00:01<00:15, 132.06it/s][2025-03-15 23:10:23.612033]   9%|▉         | 195/2138 [00:01<00:12, 151.29it/s][2025-03-15 23:10:23.923565]  11%|█         | 227/2138 [00:01<00:14, 133.03it/s][2025-03-15 23:10:24.024976]  12%|█▏        | 255/2138 [00:01<00:12, 154.62it/s][2025-03-15 23:10:24.200460]  13%|█▎        | 274/2138 [00:02<00:13, 141.80it/s][2025-03-15 23:10:24.405615]  14%|█▎        | 290/2138 [00:02<00:15, 122.06it/s][2025-03-15 23:10:24.517619]  14%|█▍        | 304/2138 [00:02<00:14, 122.69it/s][2025-03-15 23:10:24.692167]  15%|█▍        | 318/2138 [00:02<00:16, 109.85it/s][2025-03-15 23:10:24.794107]  15%|█▌        | 330/2138 [00:02<00:16, 111.43it/s][2025-03-15 23:10:24.988327]  16%|█▌        | 342/2138 [00:02<00:19, 93.81it/s] [2025-03-15 23:10:25.138091]  17%|█▋        | 355/2138 [00:03<00:19, 91.88it/s][2025-03-15 23:10:25.287785]  17%|█▋        | 371/2138 [00:03<00:18, 96.27it/s][2025-03-15 23:10:25.467113]  18%|█▊        | 387/2138 [00:03<00:18, 93.83it/s][2025-03-15 23:10:25.588153]  19%|█▉        | 403/2138 [00:03<00:16, 103.06it/s][2025-03-15 23:10:25.742156]  20%|█▉        | 419/2138 [00:03<00:16, 103.32it/s][2025-03-15 23:10:25.901180]  20%|██        | 435/2138 [00:03<00:16, 102.49it/s][2025-03-15 23:10:26.027092]  21%|██        | 451/2138 [00:03<00:15, 108.86it/s][2025-03-15 23:10:26.204850]  22%|██▏       | 467/2138 [00:04<00:16, 102.39it/s][2025-03-15 23:10:26.313139]  23%|██▎       | 483/2138 [00:04<00:14, 112.83it/s][2025-03-15 23:10:26.555855]  23%|██▎       | 499/2138 [00:04<00:17, 92.93it/s] [2025-03-15 23:10:26.802138]  24%|██▍       | 515/2138 [00:04<00:19, 82.28it/s][2025-03-15 23:10:26.976156]  25%|██▍       | 531/2138 [00:04<00:18, 84.96it/s][2025-03-15 23:10:27.213318]  26%|██▌       | 547/2138 [00:05<00:20, 78.83it/s][2025-03-15 23:10:27.436330]  26%|██▋       | 563/2138 [00:05<00:20, 76.56it/s][2025-03-15 23:10:27.644725]  27%|██▋       | 579/2138 [00:05<00:20, 76.62it/s][2025-03-15 23:10:27.881850]  28%|██▊       | 595/2138 [00:05<00:20, 73.63it/s][2025-03-15 23:10:28.106177]  29%|██▊       | 611/2138 [00:06<00:20, 72.92it/s][2025-03-15 23:10:28.335559]  29%|██▉       | 627/2138 [00:06<00:21, 71.93it/s][2025-03-15 23:10:28.523606]  30%|███       | 643/2138 [00:06<00:19, 75.44it/s][2025-03-15 23:10:28.761227]  31%|███       | 659/2138 [00:06<00:20, 72.82it/s][2025-03-15 23:10:28.976841]  32%|███▏      | 675/2138 [00:06<00:19, 73.23it/s][2025-03-15 23:10:29.177069]  32%|███▏      | 691/2138 [00:07<00:19, 75.11it/s][2025-03-15 23:10:29.429273]  33%|███▎      | 707/2138 [00:07<00:20, 71.17it/s][2025-03-15 23:10:29.697915]  34%|███▍      | 723/2138 [00:07<00:21, 67.24it/s][2025-03-15 23:10:29.962867]  35%|███▍      | 739/2138 [00:07<00:21, 65.03it/s][2025-03-15 23:10:30.212671]  35%|███▌      | 755/2138 [00:08<00:21, 64.73it/s][2025-03-15 23:10:30.481332]  36%|███▌      | 771/2138 [00:08<00:21, 63.09it/s][2025-03-15 23:10:30.747988]  37%|███▋      | 787/2138 [00:08<00:21, 62.13it/s][2025-03-15 23:10:31.016565]  38%|███▊      | 803/2138 [00:08<00:21, 61.34it/s][2025-03-15 23:10:31.278889]  38%|███▊      | 819/2138 [00:09<00:21, 61.23it/s][2025-03-15 23:10:31.553743]  39%|███▉      | 835/2138 [00:09<00:21, 60.30it/s][2025-03-15 23:10:32.136239]  40%|███▉      | 851/2138 [00:10<00:28, 44.38it/s][2025-03-15 23:10:32.364350]  41%|████      | 867/2138 [00:10<00:25, 49.88it/s][2025-03-15 23:10:32.593486]  41%|████▏     | 883/2138 [00:10<00:23, 54.56it/s][2025-03-15 23:10:32.804735]  42%|████▏     | 899/2138 [00:10<00:20, 59.55it/s][2025-03-15 23:10:33.001838]  43%|████▎     | 915/2138 [00:10<00:18, 64.76it/s][2025-03-15 23:10:33.171565]  44%|████▎     | 931/2138 [00:11<00:16, 71.46it/s][2025-03-15 23:10:33.340305]  44%|████▍     | 947/2138 [00:11<00:15, 77.12it/s][2025-03-15 23:10:33.479899]  45%|████▌     | 963/2138 [00:11<00:13, 85.58it/s][2025-03-15 23:10:33.626531]  46%|████▌     | 979/2138 [00:11<00:12, 91.49it/s][2025-03-15 23:10:33.752173]  47%|████▋     | 995/2138 [00:11<00:11, 100.11it/s][2025-03-15 23:10:33.876029]  47%|████▋     | 1011/2138 [00:11<00:10, 107.09it/s][2025-03-15 23:10:33.994784]  48%|████▊     | 1027/2138 [00:11<00:09, 114.09it/s][2025-03-15 23:10:34.205379]  50%|████▉     | 1059/2138 [00:12<00:08, 128.91it/s][2025-03-15 23:10:34.384005]  51%|█████     | 1090/2138 [00:12<00:07, 143.30it/s][2025-03-15 23:10:34.552467]  52%|█████▏    | 1122/2138 [00:12<00:06, 157.38it/s][2025-03-15 23:10:34.708848]  54%|█████▍    | 1154/2138 [00:12<00:05, 170.91it/s][2025-03-15 23:10:34.855750]  55%|█████▌    | 1186/2138 [00:12<00:05, 183.95it/s][2025-03-15 23:10:34.988136]  57%|█████▋    | 1218/2138 [00:12<00:04, 199.14it/s][2025-03-15 23:10:35.110967]  58%|█████▊    | 1250/2138 [00:13<00:04, 215.03it/s][2025-03-15 23:10:35.224989]  60%|█████▉    | 1282/2138 [00:13<00:03, 231.80it/s][2025-03-15 23:10:35.327610]  61%|██████▏   | 1314/2138 [00:13<00:03, 251.58it/s][2025-03-15 23:10:35.429841]  63%|██████▎   | 1346/2138 [00:13<00:02, 267.59it/s][2025-03-15 23:10:35.574932]  65%|██████▌   | 1394/2138 [00:13<00:02, 289.44it/s][2025-03-15 23:10:35.708121]  67%|██████▋   | 1442/2138 [00:13<00:02, 311.46it/s][2025-03-15 23:10:35.833024]  70%|██████▉   | 1490/2138 [00:13<00:01, 332.98it/s][2025-03-15 23:10:35.950034]  72%|███████▏  | 1538/2138 [00:13<00:01, 355.32it/s][2025-03-15 23:10:36.058525]  74%|███████▍  | 1586/2138 [00:13<00:01, 378.59it/s][2025-03-15 23:10:36.192489]  77%|███████▋  | 1650/2138 [00:14<00:01, 410.69it/s][2025-03-15 23:10:36.314694]  80%|████████  | 1714/2138 [00:14<00:00, 444.47it/s][2025-03-15 23:10:36.433402]  83%|████████▎ | 1778/2138 [00:14<00:00, 472.00it/s][2025-03-15 23:10:36.542523]  86%|████████▌ | 1842/2138 [00:14<00:00, 503.70it/s][2025-03-15 23:10:36.647338]  89%|████████▉ | 1906/2138 [00:14<00:00, 533.15it/s][2025-03-15 23:10:36.764674]  93%|█████████▎| 1986/2138 [00:14<00:00, 578.69it/s][2025-03-15 23:10:36.878723]  97%|█████████▋| 2066/2138 [00:14<00:00, 615.23it/s][2025-03-15 23:10:36.953293] 100%|██████████| 2138/2138 [00:14<00:00, 144.00it/s]
+[2025/03/15 23:10:36] ppocr DEBUG: Namespace(help='==SUPPRESS==', use_gpu=False, use_xpu=False, use_npu=False, use_mlu=False, use_gcu=False, ir_optim=True, use_tensorrt=False, min_subgraph_size=15, precision='fp32', gpu_mem=500, gpu_id=0, image_dir=None, page_num=0, det_algorithm='DB', det_model_dir='/home/appuser/.paddleocr/whl/det/ch/ch_PP-OCRv4_det_infer', det_limit_side_len=960, det_limit_type='max', det_box_type='quad', det_db_thresh=0.3, det_db_box_thresh=0.6, det_db_unclip_ratio=2.0, max_batch_size=10, use_dilation=False, det_db_score_mode='fast', det_east_score_thresh=0.8, det_east_cover_thresh=0.1, det_east_nms_thresh=0.2, det_sast_score_thresh=0.5, det_sast_nms_thresh=0.2, det_pse_thresh=0, det_pse_box_thresh=0.85, det_pse_min_area=16, det_pse_scale=1, scales=[8, 16, 32], alpha=1.0, beta=1.0, fourier_degree=5, rec_algorithm='SVTR_LCNet', rec_model_dir='/home/appuser/.paddleocr/whl/rec/ch/ch_PP-OCRv4_rec_infer', rec_image_inverse=True, rec_image_shape='3, 48, 320', rec_batch_num=6, max_text_length=25, rec_char_dict_path='/home/adminuser/venv/lib/python3.12/site-packages/paddleocr/ppocr/utils/ppocr_keys_v1.txt', use_space_char=True, vis_font_path='./doc/fonts/simfang.ttf', drop_score=0.5, e2e_algorithm='PGNet', e2e_model_dir=None, e2e_limit_side_len=768, e2e_limit_type='max', e2e_pgnet_score_thresh=0.5, e2e_char_dict_path='./ppocr/utils/ic15_dict.txt', e2e_pgnet_valid_set='totaltext', e2e_pgnet_mode='fast', use_angle_cls=False, cls_model_dir='/home/appuser/.paddleocr/whl/cls/ch_ppocr_mobile_v2.0_cls_infer', cls_image_shape='3, 48, 192', label_list=['0', '180'], cls_batch_num=6, cls_thresh=0.9, enable_mkldnn=False, cpu_threads=10, use_pdserving=False, warmup=False, sr_model_dir=None, sr_image_shape='3, 32, 128', sr_batch_num=1, draw_img_save_dir='./inference_results', save_crop_res=False, crop_res_save_dir='./output', use_mp=False, total_process_num=1, process_id=0, benchmark=False, save_log_path='./log_output/', show_log=True, use_onnx=False, onnx_providers=False, onnx_sess_options=False, return_word_box=False, output='./output', table_max_len=488, table_algorithm='TableAttn', table_model_dir=None, merge_no_span_structure=True, table_char_dict_path=None, formula_algorithm='LaTeXOCR', formula_model_dir=None, formula_char_dict_path=None, formula_batch_num=1, layout_model_dir=None, layout_dict_path=None, layout_score_threshold=0.5, layout_nms_threshold=0.5, kie_algorithm='LayoutXLM', ser_model_dir=None, re_model_dir=None, use_visual_backbone=True, ser_dict_path='../train_data/XFUND/class_list_xfun.txt', ocr_order_method=None, mode='structure', image_orientation=False, layout=True, table=True, formula=False, ocr=True, recovery=False, recovery_to_markdown=False, use_pdf2docx_api=False, invert=False, binarize=False, alphacolor=(255, 255, 255), lang='ch', det=True, rec=True, type='ocr', savefile=False, ocr_version='PP-OCRv4', structure_version='PP-StructureV2')
+
+
+--------------------------------------
+C++ Traceback (most recent call last):
+--------------------------------------
+0   paddle_infer::Predictor::Predictor(paddle::AnalysisConfig const&)
+1   std::unique_ptr<paddle::PaddlePredictor, std::default_delete<paddle::PaddlePredictor> > paddle::CreatePaddlePredictor<paddle::AnalysisConfig, (paddle::PaddleEngineKind)2>(paddle::AnalysisConfig const&)
+2   paddle::AnalysisPredictor::Init(std::shared_ptr<paddle::framework::Scope> const&, std::shared_ptr<paddle::framework::ProgramDesc> const&)
+3   paddle::AnalysisPredictor::PrepareProgram(std::shared_ptr<paddle::framework::ProgramDesc> const&)
+4   paddle::AnalysisPredictor::OptimizeInferenceProgram()
+5   paddle::inference::analysis::Analyzer::RunAnalysis(paddle::inference::analysis::Argument*)
+6   paddle::inference::analysis::IrAnalysisPass::RunImpl(paddle::inference::analysis::Argument*)
+7   paddle::inference::analysis::IRPassManager::Apply(std::unique_ptr<paddle::framework::ir::Graph, std::default_delete<paddle::framework::ir::Graph> >)
+8   paddle::framework::ir::Pass::Apply(paddle::framework::ir::Graph*) const
+9   paddle::framework::ir::SelfAttentionFusePass::ApplyImpl(paddle::framework::ir::Graph*) const
+10  paddle::framework::ir::GraphPatternDetector::operator()(paddle::framework::ir::Graph*, std::function<void (std::map<paddle::framework::ir::PDNode*, paddle::framework::ir::Node*, paddle::framework::ir::GraphPatternDetector::PDNodeCompare, std::allocator<std::pair<paddle::framework::ir::PDNode* const, paddle::framework::ir::Node*> > > const&, paddle::framework::ir::Graph*)>)
+
+----------------------
+Error Message Summary:
+----------------------
+FatalError: `Illegal instruction` is detected by the operating system.
+  [TimeInfo: *** Aborted at 1742080237 (unix time) try "date -d @1742080237" if you are using GNU date ***]
+  [SignalInfo: *** SIGILL (@0x78b049bbe60a) received by PID 897 (TID 0x78b05effd700) from PID 1237050890 ***]
+
+/app/scripts/run-streamlit.sh: line 9:   896 Illegal instruction     sudo -E -u appuser /home/adminuser/venv/bin/streamlit "$@"
