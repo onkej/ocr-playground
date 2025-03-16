@@ -1,14 +1,14 @@
 📄 OCR Tool for Chinese PDFs
 ============================== 
+**[2025.03.16]** Tried deploying through HuggingFace Space, it works! 😹
 
-Link to App: [PaddleOCR for Chinese PDFs](https://onkej-paddleocr-for-chinese-pdfs.hf.space)
+✨**Link to Miracle**✨  
+[**PaddleOCR for Chinese PDFs**](https://onkej-paddleocr-for-chinese-pdfs.hf.space)
 
-
+------
 Designed for the purpose of supporting sociological research on contemporary China, this tool aims to help researchers extract texts from PDF files written in simplified Chinese.
 
-
 **Table of Contents**
-- [📄 OCR Tool for Chinese PDFs](#-ocr-tool-for-chinese-pdfs)
 - [Context](#context)
 - [Installation](#installation)
 - [Usage](#usage)
@@ -47,7 +47,7 @@ pip install -r requirements.txt
 # Usage
 Wait for the installation to complete, then run the application:
 ```bash
-streamlit run zhsOCR.py
+streamlit run app.py
 ```
 
 The application will open in your default web browser, allowing you to upload PDF files and it will extract texts from them. For example, you can test the tool by uploading one or more PDF files provided in the `pdfs` folder. These files are samples of provincial budget documents that you can use to evaluate the tool's performance.
