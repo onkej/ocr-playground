@@ -1,10 +1,14 @@
 📄 OCR Tool for Chinese PDFs
 ============================== 
 
+Link to App: [PaddleOCR for Chinese PDFs](https://onkej-paddleocr-for-chinese-pdfs.hf.space)
+
+
 Designed for the purpose of supporting sociological research on contemporary China, this tool aims to help researchers extract texts from PDF files written in simplified Chinese.
 
 
 **Table of Contents**
+- [📄 OCR Tool for Chinese PDFs](#-ocr-tool-for-chinese-pdfs)
 - [Context](#context)
 - [Installation](#installation)
 - [Usage](#usage)
