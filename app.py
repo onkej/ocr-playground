@@ -31,11 +31,14 @@ def ocr_from_pdf(pdf):
         # do OCR for current PDF
         result = ocr.ocr(temp_pdf_path, cls=True)
 
-        # Extract text
         ocr_text = ""
-        for page_res in result:
-            for line in page_res:
-                ocr_text += line[1][0] + "\n"
+        if not result:
+            st.warning(f"⚠️ `{pdf.name}` returned empty OCR text.")
+        else:
+            # Extract text
+            for page_res in result:
+                for line in page_res:
+                    ocr_text += line[1][0] + "\n"
 
     return ocr_text
 
@@ -78,21 +81,29 @@ if uploaded_pdfs:
                     expanded=True
                 ) as status:
                     ocr_text = ocr_from_pdf(pdf)
-                # Update status
-                status.update(
-                    label=f"✅ `{pdf.name}` processed successfully!", 
-                    state="complete"
-                )
+                
+                if ocr_text:
+                    # Update status
+                    status.update(
+                        label=f"✅ `{pdf.name}` finished.", 
+                        state="complete"
+                    )
+                    # Add this OCR text as a file inside the zip
+                    zip_file.writestr(f"{pdf.name.split('.')[0]}_ocr.txt", ocr_text)
+                else:
+                    # Update status
+                    status.update(
+                        label=f"❌ `{pdf.name}` failed.", 
+                        state="error"
+                    )
+                
                 # Update overall progress
                 overall_progress.progress((idx+1) / len(uploaded_pdfs))
-
-                 # Add this OCR text as a file inside the zip
-                zip_file.writestr(f"{pdf.name.split('.')[0]}_ocr.txt", ocr_text)
         
         # Seek to the beginning of the byte stream before sending it for download
         zip_buffer.seek(0)
 
-        st.success(f"✅ OCR completed for {len(uploaded_pdfs)} files!")
+        st.success(f"✅ OCR completed for {len(uploaded_pdfs)} files.")
         # Provide a downloadable zip file containing all OCR results
         st.download_button(
             label="Download OCR Texts `(.zip)`",
